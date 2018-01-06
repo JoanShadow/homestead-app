@@ -27,15 +27,15 @@ Route::get('/foro', function () {
     return "Esto és el foro!";
 });
 
-Route::get('/post/(id)', function ($id) {
+Route::get('/post/{id}', function {$id} {
     return "Este és el post nº: " . $id;
 });
 
 
-Route::get('/post/(id)/(name)', function ($id, $name) {
+Route::get('/post/{id}/{name}', function ($id, $name) {
     return "Este és el post nº: " . $id . "<p>" . "Creado por -> " . $name . "</p>";
 })->where('name', '[a-zA-Z]+');*/
 
 Route::get('/inicio', 'FirstController@inicio');
 
-Route::get('/index', 'ArtisanResourcesController@index');
+Route::get('/index/{id}', 'ArtisanResourcesController@index');

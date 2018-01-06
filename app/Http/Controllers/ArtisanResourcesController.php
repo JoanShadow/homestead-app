@@ -13,10 +13,9 @@ class ArtisanResourcesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index($id) {
         //
-        return "Estás en la página index del sitio!";
+        return "Estás en la página index del sitio y el valor pasado por parámetro és: " . $id;
     }
 
     /**
