@@ -11,11 +11,12 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/about-us', function () {
+Route::get('/about-us', function () {
     return "Esta és la página que habla sobre nosotros!";
 });
 
@@ -34,8 +35,13 @@ Route::get('/post/{id}', function {$id} {
 
 Route::get('/post/{id}/{name}', function ($id, $name) {
     return "Este és el post nº: " . $id . "<p>" . "Creado por -> " . $name . "</p>";
-})->where('name', '[a-zA-Z]+');*/
+})->where('name', '[a-zA-Z]+');
 
 Route::get('/inicio', 'FirstController@inicio');
+*/
 
 Route::get('/index/{id}', 'ArtisanResourcesController@index');
+Route::get('/', 'PaginasController@inicio');
+Route::get('/contactanos', 'PaginasController@contactanos');
+Route::get('/quienes-somos', 'PaginasController@quienesSomos');
+Route::get('/blog', 'PaginasController@blog');
